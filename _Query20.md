@@ -1,0 +1,1 @@
+continue with any updates to the rest of the system.  the system is not supporting kubernetes as part of the OCI implementation.  rewrite with support for kubernetes.  work harder to examine the OCI implenetation and improve if needed any aspects of it.  continue the rule of  copyright notice on all file headers and include the full path of the file as a comment in the header.

@@ -1,0 +1,1 @@
+please do a new version of 'views/dashboard.ejs' as it was incomplete and has javascript errors, continue with more wow factor AR/VR implementations for the entire system.
