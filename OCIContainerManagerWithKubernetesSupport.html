@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCI Implementation with Kubernetes - Safeguard LLM Responses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <style>
+        pre {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        .query-section {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+        .response-section {
+            border-left: 4px solid #28a745;
+            padding-left: 15px;
+        }
+        .code-block {
+            margin: 20px 0;
+            position: relative;
+        }
+        .language-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2px 8px;
+            background: #6c757d;
+            color: white;
+            font-size: 12px;
+            border-radius: 0 4px 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <header class="mb-5">
+            <h1>OCI Implementation with Kubernetes Support</h1>
+            <p class="text-muted">Query 20 and Response 20</p>
+            <a href="index.html" class="btn btn-outline-secondary mb-3">← Back to Index</a>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3>Query 20</h3>
+                    </div>
+                    <div class="card-body query-section">
+                        <p>continue with any updates to the rest of the system. the system is not supporting kubernetes as part of the OCI implementation. rewrite with support for kubernetes. work harder to examine the OCI implementation and improve if needed any aspects of it. continue the rule of copyright notice on all file headers and include the full path of the file as a comment in the header.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3>Response 20</h3>
+                    </div>
+                    <div class="card-body response-section">
+                        <p>I'll implement Kubernetes support for the OCI system and update the remaining components with copyright notices in all file headers. Let's start by creating a comprehensive Kubernetes manager module and improving the OCI implementation.</p>
+                        
+                        <h4>1. Enhanced OCIContainerManager with Kubernetes support:</h4>
+                        
+                        <div class="code-block">
+                            <span class="language-label">JavaScript</span>
+                            <pre><code class="language-javascript">// Path: /private/plugin/modules/OCIContainerManager.js
+// Written by Greg Deeds, Autonomy Association International, Inc.
+// Copyright 2025 Autonomy Association International Inc., all rights reserved 
+// Safeguard patent license from National Aeronautics and Space Administration (NASA)
+// Copyright 2025 NASA, all rights reserved
+
+/**
+ * OCI Container Manager
+ * Comprehensive manager for OCI-compliant containers (Docker, Podman) and Kubernetes
+ */
+
+const { execSync, spawn } = require('child_process');
+const fs = require('fs').promises;
+const path = require('path');
+const yaml = require('js-yaml');
+// ... more code ...
+
+class OCIContainerManager {
+  /**
+   * Create a new OCIContainerManager instance
+   * @param {Object} options - Configuration options
+   * @param {string} options.containerEngine - Container engine to use ('docker', 'podman')
+   * @param {string} options.composeVersion - Docker Compose version to use ('v1', 'v2')
+   * @param {boolean} options.enablePrivileged - Whether to allow privileged containers
+   * @param {string} options.networkName - Default container network
+   * @param {Object} options.defaultResources - Default resource limits
+   * @param {boolean} options.kubernetesEnabled - Whether Kubernetes integration is enabled
+   * @param {string} options.kubeconfig - Path to kubeconfig file
+   * @param {string} options.namespace - Default Kubernetes namespace
+   */
+  constructor(options = {}) {
+    // ... implementation ...
+  }
+
+  // ... methods for both OCI containers and Kubernetes ...
+}</code></pre>
+                        </div>
+                        
+                        <h4>2. Dedicated Kubernetes Manager</h4>
+                        <p>The implementation includes a dedicated Kubernetes Manager module for advanced operations and integration with MongoDB for state persistence.</p>
+                        
+                        <h4>3. OpenAPI Wizard Kubernetes Integration</h4>
+                        <p>Created a Kubernetes deployer for OpenAPI plugins with support for ConfigMaps, Secrets, and Ingress resources.</p>
+                        
+                        <h4>4. Enhanced Cloudflare Zero Trust Integration</h4>
+                        <p>Implemented a controller to manage Cloudflare tunnels with Kubernetes and added a service watcher to automatically create tunnels for labeled services.</p>
+                        
+                        <h4>5. Improved System Onboarding</h4>
+                        <p>Updated the onboarding script to include Kubernetes setup options for both Minikube and K3s deployment scenarios.</p>
+                        
+                        <h4>Summary</h4>
+                        <p>These improvements make the system much more robust, with proper Kubernetes integration and enhanced security through zero trust principles. The code now provides a solid foundation for deploying, managing, and securing applications in both containerized and Kubernetes environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light p-4 mt-5">
+        <div class="container text-center">
+            <p>© 2025 Safeguard System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

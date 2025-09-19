@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Onboarding Process - Safeguard LLM Responses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <style>
+        pre {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        .query-section {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+        .response-section {
+            border-left: 4px solid #28a745;
+            padding-left: 15px;
+        }
+        .code-block {
+            margin: 20px 0;
+            position: relative;
+        }
+        .language-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2px 8px;
+            background: #6c757d;
+            color: white;
+            font-size: 12px;
+            border-radius: 0 4px 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <header class="mb-5">
+            <h1>Plugin Onboarding Process</h1>
+            <p class="text-muted">Query 24-25 and Response</p>
+            <a href="index.html" class="btn btn-outline-secondary mb-3">← Back to Index</a>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3>Query 24-25</h3>
+                    </div>
+                    <div class="card-body query-section">
+                        <p>Summarized query about plugin architecture and onboarding process, with requirements for an interactive shell script that can:</p>
+                        <ul>
+                            <li>Detect whether user is using Windows, macOS, or Unix</li>
+                            <li>Determine if project uses Node.js or Python</li>
+                            <li>Parse configuration files to identify dependencies</li>
+                            <li>Handle Dockerfile creation and configuration</li>
+                            <li>Configure plugin contract terms, billing, and UI elements</li>
+                            <li>Generate complete plugin configuration with API methods and events</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3>Response 24-25</h3>
+                    </div>
+                    <div class="card-body response-section">
+                        <p>I've created a comprehensive plugin onboarding system with HTML, Bash, ZSH, and PowerShell scripts to guide developers through the plugin creation process. The system includes:</p>
+                        
+                        <h4>Key Features Implemented:</h4>
+                        <ul>
+                            <li>Interactive shell scripts for Bash, ZSH (macOS/Darwin), and PowerShell (Windows)</li>
+                            <li>Automatic project type detection (Node.js/Python)</li>
+                            <li>Configuration file parsing and dependency extraction</li>
+                            <li>Automatic API method and event detection from source code</li>
+                            <li>Dockerfile generation with appropriate base images</li>
+                            <li>Complete plugin configuration with billing, licensing, and UI options</li>
+                            <li>Packaging and Git repository setup</li>
+                        </ul>
+                        
+                        <h4>Sample Code (Bash Script Fix):</h4>
+                        <div class="code-block">
+                            <span class="language-label">Bash</span>
+                            <pre><code class="language-bash"># Function to help users define API methods
+generate_api_methods() {
+  echo -e "${CYAN}API Methods Configuration${RESET}"
+  echo -e "${CYAN}========================${RESET}"
+
+  methods=()
+
+  while true; do
+    echo -e "${YELLOW}Add a new API method? (y/n)${RESET}"
+    read -r add_method
+
+    if [[ $add_method != "y" && $add_method != "Y" ]]; then
+      break
+    fi
+    
+    echo -e "${YELLOW}Enter method name:${RESET}"
+    read -r method_name
+    
+    # ... more code ...
+    
+    methods+=("{\"name\":\"$method_name\",\"description\":\"$method_description\",\"parameters\":[$(for param in "${method_params[@]}"; do echo "\"$param\""; done | tr '\n' ',' | sed 's/,$//' | sed 's/,/, /g')],\"returns\":\"$method_return\"}")
+  done  # Fixed syntax error: replaced '}' with 'done'
+
+  echo -e "${GREEN}API methods added: ${#methods[@]}${RESET}"
+  auto_detected_methods="${methods[*]}"
+}</code></pre>
+                        </div>
+                        
+                        <h4>Cross-Platform Support:</h4>
+                        <p>The implementation includes specialized scripts for different platforms:</p>
+                        <ul>
+                            <li>Bash script for Linux/Unix environments</li>
+                            <li>ZSH script optimized for macOS/Darwin</li>
+                            <li>PowerShell script for Windows systems</li>
+                        </ul>
+                        
+                        <h4>Conclusion</h4>
+                        <p>The onboarding system provides a seamless experience for plugin developers across different platforms, with smart detection of project details and automatic configuration generation, all with proper error handling and user guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light p-4 mt-5">
+        <div class="container text-center">
+            <p>© 2025 Safeguard System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

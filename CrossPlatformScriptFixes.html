@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Platform Script Bug Fixes - Safeguard LLM Responses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <style>
+        pre {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        .query-section {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+        .response-section {
+            border-left: 4px solid #28a745;
+            padding-left: 15px;
+        }
+        .code-block {
+            margin: 20px 0;
+            position: relative;
+        }
+        .language-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2px 8px;
+            background: #6c757d;
+            color: white;
+            font-size: 12px;
+            border-radius: 0 4px 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <header class="mb-5">
+            <h1>Cross-Platform Script Bug Fixes</h1>
+            <p class="text-muted">Query 26-29 and Response</p>
+            <a href="index.html" class="btn btn-outline-secondary mb-3">← Back to Index</a>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3>Query 26-29</h3>
+                    </div>
+                    <div class="card-body query-section">
+                        <p>Fix syntax errors in shell scripts and create cross-platform versions:</p>
+                        <pre><code>check this issue, plugin-onboarding.sh: line 680: syntax error near unexpected token `}'
+
+rebuild bash and powershell scripts correctly, also build a zsh version for Darwin.
+
+examing and fix with a full rewrite of SafeguardPluginOnboardingScript.zsh
+./SafeguardPluginOnboardingScript.zsh: line 17: setopt: command not found
+./SafeguardPluginOnboardingScript.zsh: line 18: setopt: command not found
+./SafeguardPluginOnboardingScript.zsh: line 21: print: command not found
+...</code></pre>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3>Response 26-29</h3>
+                    </div>
+                    <div class="card-body response-section">
+                        <p>I've analyzed the issues in the onboarding scripts and provided complete solutions for all platforms.</p>
+                        
+                        <h4>1. The Issue Identified</h4>
+                        <p>The main syntax error in the original Bash script was using a closing curly brace <code>}</code> instead of <code>done</code> to close a while loop. Additionally, the ZSH script was using ZSH-specific features not available in standard shells.</p>
+                        
+                        <h4>2. Fixed Bash Script</h4>
+                        <p>Corrected the while loop closing syntax and improved error handling.</p>
+                        
+                        <h4>3. New ZSH Script for Darwin</h4>
+                        <p>Created a Darwin-specific ZSH script with proper macOS optimizations:</p>
+                        <ul>
+                            <li>Using ZSH-specific features for better macOS integration</li>
+                            <li>Fixed array handling and parameter parsing</li>
+                            <li>Added Homebrew installation recommendations</li>
+                            <li>Included macOS-specific file handling</li>
+                        </ul>
+                        
+                        <h4>4. PowerShell Script for Windows</h4>
+                        <p>Developed a Windows-compatible PowerShell script with:</p>
+                        <ul>
+                            <li>Windows-specific path handling (using backslashes)</li>
+                            <li>PowerShell-specific features like ConvertFrom-Json</li>
+                            <li>Improved file selection and menu display</li>
+                            <li>Windows-native ZIP compression using .NET libraries</li>
+                        </ul>
+                        
+                        <h4>5. Alternative Shell-Agnostic Script</h4>
+                        <p>Created a more compatible version that works across Unix-like environments:</p>
+                        
+                        <div class="code-block">
+                            <span class="language-label">Bash</span>
+                            <pre><code class="language-bash">#!/bin/bash
+# Safeguard Plugin Onboarding Script for macOS/Darwin
+# Copyright 2025 Autonomy Association International Inc., all rights reserved.
+# Version 1.0.0
+
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+RESET='\033[0m'
+
+# Display header with macOS-specific styling
+echo -e "${BLUE}┌───────────────────────────────────────────────┐${RESET}"
+echo -e "${BLUE}│       SAFEGUARD PLUGIN ONBOARDING WIZARD      │${RESET}"
+echo -e "${BLUE}├───────────────────────────────────────────────┤${RESET}"
+echo -e "${BLUE}│ Copyright 2025 Autonomy Association Int'l Inc.│${RESET}"
+echo -e "${BLUE}└───────────────────────────────────────────────┘${RESET}"
+echo ""
+echo -e "${BLUE}macOS/Darwin Edition${RESET}"
+echo ""
+
+# Check for Darwin environment
+if [[ "$(uname)" != "Darwin" ]]; then
+  echo -e "${YELLOW}Warning: This script is optimized for macOS/Darwin systems.${RESET}"
+  echo -e "${YELLOW}Some features may not work correctly on other systems.${RESET}"
+  echo ""
+fi
+
+# ... rest of the script ...</code></pre>
+                        </div>
+                        
+                        <h4>Conclusion</h4>
+                        <p>The fixed scripts maintain all original functionality while being tailored to their specific environments. The syntax errors have been corrected, and additional improvements have been made to enhance usability and reliability across different platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light p-4 mt-5">
+        <div class="container text-center">
+            <p>© 2025 Safeguard System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
